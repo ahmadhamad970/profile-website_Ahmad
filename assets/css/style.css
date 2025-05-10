@@ -1004,9 +1004,9 @@ body.dark .icon:hover i {
   margin: auto 0;
   width: 380px;
   height: 380px;
-  border-radius: 55% 45% 55% 45%;
+  border-radius: 50%;
   overflow: hidden;
-  animation: imgFloat 7s ease-in-out infinite;
+  /* Animation removed to keep image stable */
 }
 
 .image img {
@@ -1020,12 +1020,14 @@ body.dark .icon:hover i {
 
 
 
+/* Animation keyframes removed to keep image stable
 @keyframes imgFloat {
   50% {
     transform: translateY(10px);
     border-radius: 45% 55% 45% 55%;
   }
 }
+*/
 .scroll-btn {
   position: absolute;
   bottom: 30px;
