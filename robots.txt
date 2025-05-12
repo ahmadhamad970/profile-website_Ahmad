@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: https://fadihamad.com/sitemap.xml
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Allow search engines to crawl all content
+Sitemap: https://ahmadhamad970.github.io/profile-website_Ahmad/sitemap.xml

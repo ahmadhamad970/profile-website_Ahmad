@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fadihamad.com/</loc>
-    <lastmod>2023-07-01</lastmod>
+    <loc>https://ahmadhamad970.github.io/profile-website_Ahmad</loc>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://fadihamad.com/advance_web_project.html</loc>
-    <lastmod>2023-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fadihamad.com/software_project.html</loc>
-    <lastmod>2023-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fadihamad.com/advanceSoftware_project.html</loc>
-    <lastmod>2023-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Add any additional pages if you create them in the future -->
 </urlset>
