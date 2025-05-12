@@ -19,28 +19,26 @@ function myMenuFunction() {
 
 const body = document.querySelector("body");
 
+// Always force dark mode
 document.body.classList.add("dark");
 
-window.addEventListener('DOMContentLoaded', function() {
-  if (typeof VANTA !== "undefined" && VANTA.NET) {
-    VANTA.NET({
-      el: "#vanta-background",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      color: 0xff0000,
-      backgroundColor: 0x000000,
-      points: 12,
-      maxDistance: 20,
-      spacing: 16,
-      showDots: true,
-      highlightColor: 0xff3333
-    });
+// Ensure dark mode stays enabled even if someone tries to remove it
+function enforceDarkMode() {
+  if (!document.body.classList.contains("dark")) {
+    document.body.classList.add("dark");
   }
+}
+
+// Check periodically to ensure dark mode stays enabled
+setInterval(enforceDarkMode, 1000);
+
+// Also check when DOM content is loaded
+document.addEventListener("DOMContentLoaded", enforceDarkMode);
+
+window.addEventListener('DOMContentLoaded', function() {
+  // VANTA.NET code removed
+
+  // The 3D spheres background is now handled by background.js
 });
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -73,7 +71,7 @@ function headerShadow() {
 }
 
 var typingEffect = new Typed(".typedText", {
-  strings: ["Defender", "Attacker"],
+  strings: ["Defender", "Attacker", "Ethical Hacker", "Security Expert"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
@@ -244,5 +242,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
 
 

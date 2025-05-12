@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap");
 
+/* Force dark mode by default - Cybersecurity Theme */
+body {
+  background: #050505 !important;
+  color: #cccccc !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='smallGrid' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 10 0 L 0 0 0 10' fill='none' stroke='rgba(0, 255, 0, 0.03)' stroke-width='0.5'/%3E%3C/pattern%3E%3Cpattern id='grid' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Crect width='100' height='100' fill='url(%23smallGrid)'/%3E%3Cpath d='M 100 0 L 0 0 0 100' fill='none' stroke='rgba(0, 255, 0, 0.05)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)' /%3E%3C/svg%3E") !important;
+  background-attachment: fixed !important;
+}
+
 :root {
-  --body-color: #0a0a0a;
+  --body-color: #050505;
   --color-white: #ffffff;
   --text-color-second: #cccccc;
-  --text-color-third: #ff3333;
+  --text-color-third: #00ff00;
 
   --first-color: #ff0000;
   --first-color-hover: #cc0000;
@@ -366,9 +374,9 @@ body.dark .nav-link {
 }
 
 body.dark .active-link {
-  color: var(--dark-first-color);
+  color: var(--dark-text-color-third);
   font-weight: 600;
-  text-shadow: 0 0 5px rgba(90, 120, 255, 0.3);
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
 }
 
 body.dark .featured-name {
@@ -380,11 +388,11 @@ body.dark .featured-name {
 body.dark .typedText {
   color: var(--dark-text-color-third);
   font-weight: 700;
-  text-shadow: 0 0 8px rgba(93, 219, 255, 0.4);
+  text-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
 }
 
 body.dark .featured-text-info {
-  color: #000;
+  color: #cccccc;
   font-weight: 500;
   line-height: 1.7;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -459,16 +467,7 @@ body.dark footer .footer_menu_list a:hover {
   color: var(--dark-text-color-third);
 }
 
-body.dark .scroll-btn {
-  background: var(--dark-body-color);
-  color: var(--dark-text-color-second);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
 
-body.dark .scroll-btn:hover {
-  background: var(--dark-card-color);
-  color: var(--dark-text-color-third);
-}
 
 body.dark .moon-sun :is(#moon, #sun) {
   color: #000;
@@ -768,12 +767,14 @@ body.dark .icon i {
   width: 100%;
   height: 100%;
   z-index: 0;
-  background-color: #000000;
+  background-color: #030303;
   overflow: hidden;
+  background-image: radial-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 
 body.dark #vanta-background {
-  background-color: #000000;
+  background-color: #030303;
 }
 
 .featured-name p span {
@@ -1028,77 +1029,6 @@ body.dark .icon:hover i {
   }
 }
 */
-.scroll-btn {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 180px;
-  height: 60px;
-  gap: 8px;
-  text-decoration: none;
-  color: var(--text-color-second);
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--card-shadow);
-  transition: all var(--transition-normal);
-  animation: scrollBtnPulse 2s infinite;
-  border: 1px solid rgba(67, 97, 238, 0.1);
-}
-
-.scroll-btn i {
-  font-size: 24px;
-  color: var(--first-color);
-  animation: scrollArrowBounce 2s infinite;
-}
-
-.scroll-btn p {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0;
-}
-
-.scroll-btn:hover {
-  background: var(--gradient-primary);
-  color: var(--color-white);
-  transform: translateX(-50%) translateY(-5px);
-  box-shadow: var(--hover-shadow);
-}
-
-.scroll-btn:hover i {
-  color: var(--color-white);
-}
-
-@keyframes scrollBtnPulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(67, 97, 238, 0);
-  }
-}
-
-@keyframes scrollArrowBounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-8px);
-  }
-  60% {
-    transform: translateY(-4px);
-  }
-}
 
 .section {
   padding-block: 5em;
@@ -1112,6 +1042,11 @@ body.dark .icon:hover i {
   width: 100%;
   height: 100%;
   z-index: 0;
+  background-color: #030303;
+  background-image:
+    linear-gradient(rgba(0, 255, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 .row {
